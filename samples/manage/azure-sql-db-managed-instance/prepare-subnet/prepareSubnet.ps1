@@ -910,8 +910,7 @@ function PrepareNSG
 
     Try
     {
-        $networkSecurityGroup = New-AzNetworkSecurityGroup -Name $networkSecurityGroupName -ResourceGroupName $virtualNetwork.ResourceGroupName -Location $virtualNetwork.Location -SecurityRules $securityRules -Tag @{applicationName="MBP"}
-    }
+        $networkSecurityGroup = New-AzNetworkSecurityGroup -Name $networkSecurityGroupName -ResourceGroupName $virtualNetwork.ResourceGroupName -Location $virtualNetwork.Location -SecurityRules $securityRules -Tag @{applicationCode="582";departmentChargeCode="400971";par="43277";requestorAdId="ghh6cxl";requestorEmployeeId="1710244"}    }
     Catch
     {
         Write-Host "Failed: $_" -ForegroundColor Red
@@ -934,7 +933,7 @@ function PrepareRouteTable
 
     Try
     {
-        $routeTable = New-AzRouteTable -Name $routeTableName -ResourceGroupName $virtualNetwork.ResourceGroupName -Location $virtualNetwork.Location -Route $routes -Tag @{applicationName="MBP"}
+        $routeTable = New-AzRouteTable -Name $routeTableName -ResourceGroupName $virtualNetwork.ResourceGroupName -Location $virtualNetwork.Location -Route $routes -Tag @{applicationCode="582";departmentChargeCode="400971";par="43277";requestorAdId="ghh6cxl";requestorEmployeeId="1710244"}
     }
     Catch
     {
