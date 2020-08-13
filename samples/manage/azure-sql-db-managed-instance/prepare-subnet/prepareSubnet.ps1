@@ -910,7 +910,7 @@ function PrepareNSG
 
     Try
     {
-        $networkSecurityGroup = New-AzNetworkSecurityGroup -Name $networkSecurityGroupName -ResourceGroupName $virtualNetwork.ResourceGroupName -Location $virtualNetwork.Location -SecurityRules $securityRules
+        $networkSecurityGroup = New-AzNetworkSecurityGroup -Name $networkSecurityGroupName -ResourceGroupName $virtualNetwork.ResourceGroupName -Location $virtualNetwork.Location -SecurityRules $securityRules -Tag @{applicationName="MBP"}
     }
     Catch
     {
@@ -934,7 +934,7 @@ function PrepareRouteTable
 
     Try
     {
-        $routeTable = New-AzRouteTable -Name $routeTableName -ResourceGroupName $virtualNetwork.ResourceGroupName -Location $virtualNetwork.Location -Route $routes
+        $routeTable = New-AzRouteTable -Name $routeTableName -ResourceGroupName $virtualNetwork.ResourceGroupName -Location $virtualNetwork.Location -Route $routes -Tag @{applicationName="MBP"}
     }
     Catch
     {
